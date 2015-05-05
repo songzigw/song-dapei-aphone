@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_about_selector"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/Smile.ImageView.Photo_Middle"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/new_friends_icon" />
+
+            <TextView
+                style="@style/Smile.TextView._Black"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="@string/new_friends" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_msg_tips_newfridend"
+            style="@style/Smile.ImageView"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/register_bottom_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_at_my"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_about_selector"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/Smile.ImageView.Photo_Middle"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/messagescenter_at" />
+
+            <TextView
+                style="@style/Smile.TextView._Black"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="我的" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_msg_tips_at_my"
+            style="@style/Smile.ImageView"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/register_bottom_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_comment_my"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_about_selector"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/Smile.ImageView.Photo_Middle"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/messagescenter_comments" />
+
+            <TextView
+                style="@style/Smile.TextView._Black"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="收到的评论" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_msg_tips_comment_my"
+            style="@style/Smile.ImageView"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/register_bottom_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_praise_my"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/Smile.ImageView.Photo_Middle"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/messagescenter_good" />
+
+            <TextView
+                style="@style/Smile.TextView._Black"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="给我的赞" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_msg_tips_praise_my"
+            style="@style/Smile.ImageView"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/register_bottom_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

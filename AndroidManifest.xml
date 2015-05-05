@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.song.dapei.aphone"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="com.song.dapei.aphone.CustomApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name="com.song.dapei.aphone.ui.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.song.dapei.aphone.ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.song.dapei.aphone.ui.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.song.dapei.aphone.ui.AddFriendActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.song.dapei.aphone.ui.LoginActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.RegisterActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.NewFriendActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.NearPeopleActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.BlackListActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.UserHomeActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.MyselfInfoActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.ContactActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.UserInfoActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.MySettingsActivity" />
+        <activity android:name="com.song.dapei.aphone.ui.CollocationDetailActivity" />
+    </application>
+
+</manifest>

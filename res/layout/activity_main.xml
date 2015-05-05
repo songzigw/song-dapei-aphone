@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab_host"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/nav_main_line"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@color/nav_main_bgcolor"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dip"
+        android:paddingTop="3dip" >
+
+        <RelativeLayout style="@style/main_tab_btn" >
+
+            <Button
+                android:id="@+id/btn_home"
+                style="@style/main_tab_btn_item"
+                android:background="@color/nav_main_bgcolor"
+                android:drawableTop="@drawable/tab_home_btn"
+                android:text="@string/nav_main_home" />
+
+            <ImageView
+                android:id="@+id/iv_home_tips"
+                style="@style/main_tab_iv_tips"
+                android:layout_toRightOf="@+id/btn_home"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_btn" >
+
+            <Button
+                android:id="@+id/btn_center"
+                style="@style/main_tab_btn_item"
+                android:background="@color/nav_main_bgcolor"
+                android:drawableTop="@drawable/tab_center_btn"
+                android:text="@string/nav_main_center" />
+
+            <ImageView
+                android:id="@+id/iv_center_tips"
+                style="@style/main_tab_iv_tips"
+                android:layout_toRightOf="@+id/btn_center"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_btn" >
+
+            <Button
+                android:id="@+id/btn_take"
+                style="@style/main_tab_btn_item"
+                android:layout_centerInParent="true"
+                android:background="@color/nav_main_bgcolor"
+                android:drawableTop="@drawable/tab_take_btn"
+                android:text="@string/nav_main_take" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_btn" >
+
+            <Button
+                android:id="@+id/btn_message"
+                style="@style/main_tab_btn_item"
+                android:background="@color/nav_main_bgcolor"
+                android:drawableTop="@drawable/tab_message_btn"
+                android:text="@string/nav_main_message" />
+
+            <ImageView
+                android:id="@+id/iv_message_tips"
+                style="@style/main_tab_iv_tips"
+                android:layout_toRightOf="@+id/btn_message"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_tab_btn" >
+
+            <Button
+                android:id="@+id/btn_my"
+                style="@style/main_tab_btn_item"
+                android:background="@color/nav_main_bgcolor"
+                android:drawableTop="@drawable/tab_my_btn"
+                android:text="@string/nav_main_my" />
+
+            <ImageView
+                android:id="@+id/iv_my_tips"
+                style="@style/main_tab_iv_tips"
+                android:layout_toRightOf="@+id/btn_my"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

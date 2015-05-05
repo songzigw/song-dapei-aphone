@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        android:layout_weight="1"
+        layout="@layout/include_action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fadingEdge="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/base_color_bg_white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp" >
+
+                <ImageView
+                    android:id="@+id/iv_recent_avatar"
+                    style="@style/Smile.ImageView.Photo_Small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/head" />
+
+                <TextView
+                    android:id="@+id/tv_recent_name"
+                    style="@style/Smile.TextView._Black"
+                    android:layout_toRightOf="@id/iv_recent_avatar"
+                    android:ellipsize="end"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="太忙一会"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_col_uptime"
+                    style="@style/Smile.TextView._Orange"
+                    android:layout_below="@id/tv_recent_name"
+                    android:layout_toRightOf="@id/iv_recent_avatar"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="5-30"
+                    android:textSize="10.0sp" />
+
+                <TextView
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_below="@id/tv_recent_name"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_col_uptime"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="发布"
+                    android:textSize="10.0sp" />
+
+                <ImageView
+                    style="@style/Smile.ImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_item_selector" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="12dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="我的最新搭配照，大家说美不美？？？"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    style="@style/Smile.ImageView"
+                    android:layout_width="120dp"
+                    android:layout_height="160dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/colloc_1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/base_horization_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_forward"
+                        style="@style/Smile.TextView._Gray"
+                        android:layout_centerInParent="true"
+                        android:text="转发"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        style="@style/Smile.ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@id/tv_forward"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/timeline_icon_redirect" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        style="@style/Smile.TextView._Gray"
+                        android:layout_centerInParent="true"
+                        android:text="评论"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        style="@style/Smile.ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@id/tv_comment"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/timeline_icon_comment" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_like"
+                        style="@style/Smile.TextView._Gray"
+                        android:layout_centerInParent="true"
+                        android:text="点赞"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        style="@style/Smile.ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@id/tv_like"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/timeline_icon_unlike" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/base_horization_line"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_comment"
+            style="@style/InputEdit"
+            android:background="@drawable/base_edit_input"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="3dp"
+            android:hint="@string/collo_comment_hint" />
+
+        <Button
+            android:id="@+id/btn_fasong"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:background="@drawable/base_edit_input"
+            android:gravity="center"
+            android:text="@string/collo_comment_send"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

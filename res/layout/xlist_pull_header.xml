@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull_to_refresh_head"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dip"
+        android:layout_marginRight="10dip"
+        android:layout_toLeftOf="@+id/text_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/arrow" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="60dip"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/xlistview_header_hint_normal" />
+
+        <TextView
+            android:id="@+id/updated_at"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_horizontal|top"
+            android:text="@string/xlistview_header_updated_at" />
+    </LinearLayout>
+
+</RelativeLayout>

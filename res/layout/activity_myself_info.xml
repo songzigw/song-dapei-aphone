@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <ScrollView
+        android:id="@+id/my_info_refresh"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_avator" />
+
+                <ImageView
+                    android:id="@+id/iv_set_avator"
+                    style="@style/Smile.ImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/default_head" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_account" />
+
+                <TextView
+                    android:id="@+id/tv_set_account"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_nick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_nick" />
+
+                <TextView
+                    android:id="@+id/tv_set_nick"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_name" />
+
+                <TextView
+                    android:id="@+id/tv_set_name"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_gender" />
+
+                <TextView
+                    android:id="@+id/tv_set_gender"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_birthday" />
+
+                <TextView
+                    android:id="@+id/tv_set_birthday"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_summary" />
+
+                <TextView
+                    android:id="@+id/tv_set_summary"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_email" />
+
+                <TextView
+                    android:id="@+id/tv_set_email"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_qq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_qq" />
+
+                <TextView
+                    android:id="@+id/tv_set_qq"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_ww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_about_selector"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/Smile.TextView._Black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/add_ww" />
+
+                <TextView
+                    android:id="@+id/tv_set_ww"
+                    style="@style/Smile.TextView._Gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="zhangsong" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

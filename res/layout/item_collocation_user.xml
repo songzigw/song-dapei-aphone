@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_color_bg_white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/theme_bg_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp" >
+
+        <TextView
+            android:id="@+id/tv_col_uptime"
+            style="@style/Smile.TextView._Orange"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:text="5-30"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/Smile.TextView._Gray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/tv_col_uptime"
+            android:singleLine="true"
+            android:text="发布"
+            android:textSize="12sp" />
+
+        <ImageView
+            style="@style/Smile.ImageView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/btn_item_selector" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="我的最新搭配照"
+            android:textSize="14sp" />
+
+        <ImageView
+            style="@style/Smile.ImageView"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/colloc_1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/base_horization_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Smile.TextView._Gray"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="..."
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_forward"
+                style="@style/Smile.TextView._Gray"
+                android:layout_centerInParent="true"
+                android:text="转发"
+                android:textSize="14sp" />
+
+            <ImageView
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/tv_forward"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/timeline_icon_redirect" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_comment"
+                style="@style/Smile.TextView._Gray"
+                android:layout_centerInParent="true"
+                android:text="评论"
+                android:textSize="14sp" />
+
+            <ImageView
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/tv_comment"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/timeline_icon_comment" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_like"
+                style="@style/Smile.TextView._Gray"
+                android:layout_centerInParent="true"
+                android:text="点赞"
+                android:textSize="14sp" />
+
+            <ImageView
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/tv_like"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/timeline_icon_unlike" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

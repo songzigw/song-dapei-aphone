@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <LinearLayout style="@style/InputSide" >
+
+        <EditText
+            android:id="@+id/et_find_name"
+            style="@style/InputEdit"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="17dp"
+            android:hint="@string/nickname"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColorHint="@color/base_color_text_hint"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/Smile.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_selector"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/search"
+            android:textColor="@color/dialog_color_title"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/base_horization_line" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/base_horizontal_line"
+        android:dividerHeight="1dp"
+        android:fadingEdgeLength="0dp"
+        android:fastScrollEnabled="true"
+        android:paddingBottom="10dp" />
+
+</LinearLayout>

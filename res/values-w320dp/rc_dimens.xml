@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="rc_rich_text_icon_margin">15.00dp</dimen>
+
+</resources>
