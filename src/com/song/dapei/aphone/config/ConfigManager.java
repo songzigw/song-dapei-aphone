@@ -14,6 +14,8 @@ import com.song.dapei.aphone.CustomApplication;
  */
 public class ConfigManager {
 
+	/** 搭配服务API网址 */
+	private static final String WEBSITE_DAPEI_API = "website.dapei.api";
 	/** 账号系统API网址 */
 	private static final String WEBSITE_ACCOUNT_API = "website.account.api";
 	/** 账号系统资源文件 */
@@ -104,5 +106,9 @@ public class ConfigManager {
 	
 	public String getWebsiteAccountApi() {
 		return (String) this.getConfigItem(WEBSITE_ACCOUNT_API);
+	}
+	
+	public String getWebsiteDapeiApi() {
+		return (String) this.getConfigItem(WEBSITE_DAPEI_API);
 	}
 }

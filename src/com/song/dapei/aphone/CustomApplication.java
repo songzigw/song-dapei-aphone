@@ -18,8 +18,10 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.song.account.api.ClientAccount;
 import com.song.account.entity.User;
 import com.song.dapei.aphone.client.SSOAuth;
+import com.song.dapei.aphone.config.ConfigManager;
 import com.song.dapei.aphone.util.SharePreferenceUtil;
 //import cn.bmob.im.BmobChat;
 //import cn.bmob.im.BmobUserManager;
@@ -50,6 +52,10 @@ public class CustomApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		// 初始化API
+		ClientAccount.init("", "", ConfigManager.getInstance()
+				.getWebsiteAccountApi());
+		
 		// 初始化RongCloud。
         //RongIM.init(this);
 		// 是否开启debug模式--默认开启状态

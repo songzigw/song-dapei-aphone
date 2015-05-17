@@ -8,7 +8,6 @@ import android.content.Context;
 import android.util.Log;
 
 import com.song.account.api.ClientAccount;
-import com.song.account.api.Config;
 import com.song.account.entity.User;
 import com.song.commons.api.ApiException;
 import com.song.commons.api.StringResult;
@@ -31,32 +30,11 @@ public class SSOAuth {
 
 	private Context context;
 	private User currUser;
-	private Config config;
 
 	private SSOAuth(Context context) {
 		if (this.context == null) {
 			this.context = context;
 		}
-		config = new Config() {
-
-			@Override
-			public String getAccountApi() {
-				return ConfigManager.getInstance().getWebsiteAccountApi();
-			}
-
-			@Override
-			public String getAppKey() {
-				// TODO Auto-generated method stub
-				return "";
-			}
-
-			@Override
-			public String getAppSecret() {
-				// TODO Auto-generated method stub
-				return "";
-			}
-
-		};
 	}
 
 	public static SSOAuth getInstance(Context context) {
@@ -97,8 +75,8 @@ public class SSOAuth {
 			@Override
 			public void run() {
 				try {
-					currUser = ClientAccount.getInstance(config)
-							.getUserBySessionId(sessionId);
+					currUser = ClientAccount.getInstance().getUserBySessionId(
+							sessionId);
 					DapeiDB.getInstance(context)
 							.updateUser(sessionId, currUser);
 				} catch (MalformedURLException e) {
@@ -160,7 +138,7 @@ public class SSOAuth {
 				try {
 					String sessionId = SSOAuth.getInstance(context)
 							.getSessionId();
-					StringResult sr = ClientAccount.getInstance(config).login(
+					StringResult sr = ClientAccount.getInstance().login(
 							account, password, sessionId);
 					// 登入成功
 					sessionId = sr.getValue();
@@ -169,12 +147,12 @@ public class SSOAuth {
 							SharePreferenceUtil.SHARED_FILE_NAME);
 					spu.setSessionId(sessionId);
 
-					currUser = ClientAccount.getInstance(config)
-							.getUserBySessionId(sessionId);
+					currUser = ClientAccount.getInstance().getUserBySessionId(
+							sessionId);
 					if (currUser != null) {
 						// 每次登入成功獲取新的TOKEN
-						StringResult sResult = ClientAccount
-								.getInstance(config).getRongToken(
+						StringResult sResult = ClientAccount.getInstance()
+								.getRongToken(
 										sessionId,
 										ConfigManager.getInstance()
 												.getResAccountUri());
@@ -220,7 +198,7 @@ public class SSOAuth {
 			@Override
 			public void run() {
 				try {
-					ClientAccount.getInstance(config).logout(sessionId);
+					ClientAccount.getInstance().logout(sessionId);
 				} catch (MalformedURLException e) {
 					Log.e(TAG, "logout", e);
 				} catch (ProtocolException e) {
@@ -247,8 +225,8 @@ public class SSOAuth {
 			@Override
 			public void run() {
 				try {
-					StringResult stringResult = ClientAccount.getInstance(
-							config).getRongToken(sessionId, resAccountUri);
+					StringResult stringResult = ClientAccount.getInstance()
+							.getRongToken(sessionId, resAccountUri);
 					// 修改本地数据库
 					DapeiDB.getInstance(context).updateUserRongToken(sessionId,
 							stringResult.getValue());

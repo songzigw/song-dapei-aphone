@@ -9,7 +9,6 @@ import java.util.List;
 import android.content.Context;
 
 import com.song.account.api.ClientAccount;
-import com.song.account.api.Config;
 import com.song.account.api.result.FriendItems;
 import com.song.account.api.result.UserPages;
 import com.song.account.entity.Friend;
@@ -18,7 +17,6 @@ import com.song.commons.api.ApiException;
 import com.song.dapei.aphone.client.db.DapeiDB;
 import com.song.dapei.aphone.client.listener.ExecuteListener;
 import com.song.dapei.aphone.client.listener.FindItemsListener;
-import com.song.dapei.aphone.config.ConfigManager;
 import com.song.dapei.aphone.util.CommonUtils;
 
 /**
@@ -32,32 +30,11 @@ public class UserManager {
 	private static UserManager mInstance;
 
 	private Context context;
-	private Config config;
 
 	private UserManager(Context context) {
 		if (this.context == null) {
 			this.context = context;
 		}
-		config = new Config() {
-
-			@Override
-			public String getAccountApi() {
-				return ConfigManager.getInstance().getWebsiteAccountApi();
-			}
-
-			@Override
-			public String getAppKey() {
-				// TODO Auto-generated method stub
-				return "";
-			}
-
-			@Override
-			public String getAppSecret() {
-				// TODO Auto-generated method stub
-				return "";
-			}
-
-		};
 	}
 
 	public static UserManager getInstance(Context context) {
@@ -90,14 +67,14 @@ public class UserManager {
 				try {
 					String sessionId = SSOAuth.getInstance(context)
 							.getSessionId();
-					FriendItems friendItems = ClientAccount.getInstance(config)
+					FriendItems friendItems = ClientAccount.getInstance()
 							.getFriendList(sessionId);
 					List<Friend> fList = friendItems.getFriendList();
 					if (fList != null) {
 						for (Friend f : fList) {
 							Long userId = f.getFriendUserId();
-							User u = ClientAccount.getInstance(config)
-									.getUserById(userId);
+							User u = ClientAccount.getInstance().getUserById(
+									userId);
 							uList.add(u);
 						}
 					}
@@ -132,6 +109,7 @@ public class UserManager {
 
 	/**
 	 * 分页查询用户
+	 * 
 	 * @param currPage
 	 * @param pageSize
 	 * @param searchName
@@ -151,8 +129,8 @@ public class UserManager {
 			public void run() {
 				List<User> uList = new ArrayList<User>();
 				try {
-					UserPages uPages = ClientAccount.getInstance(config)
-							.getUserList(searchName, currPage, pageSize);
+					UserPages uPages = ClientAccount.getInstance().getUserList(
+							searchName, currPage, pageSize);
 					uList = uPages.getUserList();
 					// 网络查询成功
 					findItemsListener.onSuccess(uList, uPages.getTotalNum());
